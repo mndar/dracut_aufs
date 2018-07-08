@@ -19,6 +19,6 @@ installkernel() {
 install() {
     inst_multiple -o fsck.ext2 fsck.ext4 fsck.ext3
 
-    inst_hook pre-mount 10 "$moddir/aufs-mount.sh"
+    inst_hook pre-udev 10 "$moddir/aufs-mount.sh"
 }
 
